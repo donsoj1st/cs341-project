@@ -1,0 +1,17 @@
+
+    <% include ../includes/head.ejs %>
+    
+    <h3 id="head2">Enter your book details</h3>
+    <form action="/display" method="post" name = "bookInfo" id="me">
+        <span>
+            <p>Input book Title:</p>
+            <input type="text" name="title">
+        </span><br>
+        <span>
+            <p>Summary:</p>
+            <textarea type="text" name = "summary"></textarea>
+        </span><br>
+
+        <span><input type="submit" value="submit"> <button type="reset">Clear</button></span>
+    </form>
+<% include ../includes/end.ejs %>
