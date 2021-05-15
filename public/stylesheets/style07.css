@@ -1,0 +1,280 @@
+
+	.header{
+			width: 100%;
+			height:10px; 
+			display:block;
+			margin: 20px; 
+		}
+.header span{
+			display: inline-block;
+			margin-left: 5px;
+			
+		}
+    nav{
+			width: 100%;
+			background-color:#09E0DD;
+			
+			align-content: center;
+			padding: 0px;
+			text-indent: 5px;
+			word-spacing: 0px;
+			display:block;
+			height: 60px;
+			text-decoration-color: white;
+
+
+		a{
+			
+			display: inline-block;
+			margin-left: 15px;
+			
+		}
+	}
+	.soji{
+		margin-top: 5px; 
+		height: 100px;
+		width: 100%;
+	    background-color:#09E0DD;
+			
+		}
+		.soji span{
+			font-size: 4px;
+			width: 15%;
+			font-style: italic;
+			display: inline-block;
+			margin-left: 1px;
+			margin-right: 1px;
+		}
+		footer{
+			display: block;
+			width: 100%;
+			background-color:#034a49;
+			text-align: center;
+		}
+		.display{
+			background-color:#034a49;
+			width: 100%;
+			height: 300px;
+		}
+		.display span{
+			margin-left:5px;
+			display: inline-block;
+			width:40%;
+		}
+	.featured{
+		height: 500px;
+		width: 100%;
+		display: block;
+	}
+	.featured span{
+		width: 20%;
+		display: inline-block;
+		margin-left: 1px;
+	}
+	.fea{
+		 background-color:#034a49;
+		 text-indent: 50px;
+	}
+	.current{
+		height: 250px;
+		width: 100%;
+		display: block;
+	}
+	.current span{
+		width: 20%;
+		display: inline-block;
+		margin-left: 1px;
+	}
+	.imga{
+		height: 100px;
+	    width: 100px;
+	}
+	.imga1{
+		padding:10px; 
+		margin-left:0; 
+		margin-top: 0px;
+	}
+	#search{
+		margin-left: 0px;
+	}
+	#cart{
+		margin-left: 0px;
+	}
+	.cart{
+		height: 20px; 
+		width: 20px;
+	}
+
+@media only screen and (min-width: 500px){
+	.soji{
+		margin-top: 5px; 
+		height: 200px;
+		width: 100%;
+	    background-color:#09E0DD;
+			
+		}
+		.soji span{
+			font-size: 10px;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		.display{
+			background-color:#034a49;
+			width: 100%;
+			height: 200px;
+		}
+		.current span{
+		width: 15%;
+		display: inline-block;
+		margin-left: 1px;
+	}
+	.featured span{
+		width: 15%;
+	}
+#search{
+		margin-left: 30px;
+	}
+	#cart{
+		margin-left: 20px;
+	}
+}
+@media only screen and (min-width: 1000px){
+	.soji{
+		margin-top: 5px; 
+		height: 200px;
+		width: 100%;
+	    background-color:#09E0DD;
+			
+		}
+		.featured{
+		height: 350px;
+		width: 100%;
+		display: block;
+	}
+.current{
+	height: 100px;
+}
+		.soji span{
+			font-size: 10px;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		.display{
+			background-color:#034a49;
+			width: 100%;
+			height: 200px;
+		}
+#search{
+		margin-left: 200px;
+	}
+	#cart{
+		margin-left: 100px;
+	}
+}
+
+
+
+@media only screen and (min-width: 1200px){
+	.header{
+			width: 100%;
+			height:30px; 
+			display:block; 
+		}
+.header span{
+			display: inline-block;
+			
+		}
+    nav{
+			width: 100%;
+			background-color:#09E0DD;
+			
+			align-content: center;
+			padding: 5px;
+			text-indent: 200px;
+			word-spacing: 10px;
+			display:block;
+			height: 20px;
+			text-decoration-color: white;
+
+
+		a{
+			
+			display: inline-block;
+			margin-left: 15px;
+			
+		}
+	}
+	.soji{
+		margin-top: 10px; 
+		height: 200px;
+		width: 100%;
+	    background-color:#09E0DD;
+			
+		}
+		.soji span{
+			font-size: 12px;
+			font-style: italic;
+			display: inline-block;
+			margin-left: 20px;
+			margin-right: 30px;
+		}
+		footer{
+			display: block;
+			width: 100%;
+			background-color:#034a49;
+			text-align: center;
+		}
+		.display{
+			background-color:#034a49;
+			width: 100%;
+			height: 250px;
+		}
+		.display span{
+			margin-left:200px;
+			display: inline-block;
+			width:400px;
+		}
+	.featured{
+		height: 500px;
+		width: 100%;
+		display: block;
+	}
+	.featured span{
+		width: 150px;
+		display: inline-block;
+		margin-left: 50px;
+	}
+	.current{
+		height: 200px;
+		width: 100%;
+		display: block;
+	}
+	.current span{
+		width: 150px;
+		display: inline-block;
+		margin-left: 50px;
+	}
+	.imga{
+		height: 200px;
+	    width: 200px;
+	}
+	.imga1{
+		padding:10px; 
+		margin-left:0; 
+		margin-top: 0px;
+	}
+	#search{
+		margin-left: 400px;
+	}
+	#cart{
+		margin-left: 500px;
+	}
+	.cart{
+		height: 40px; 
+		width: 40px;
+	}
+	.fea{
+		 background-color:#034a49;
+		 text-indent: 400px;
+	}
+}

@@ -10,7 +10,8 @@
     "start": "nodemon index.js",
     "test": "node test.js",
     "prove01": "nodemon prove01.js",
-    "prove02": "nodemon prove02.js"
+    "prove02": "nodemon prove02.js",
+    "prove03": "nodemon prove03.js"
   },
   "dependencies": {
     "ejs": "^2.7.4",
