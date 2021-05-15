@@ -13,9 +13,9 @@ app.use(parseBody.urlencoded({ extended: false }));
 
 app.use("/shop",shop);
 app.use(user);
-// app.use((req, res, next) => {
-//     res.render("pages/display", { "title": "display book inf0", list: list });
-// })
+ app.use((req, res, next) => {
+     res.render("pages/error", { "title": "error page" });
+ })
 
 
 
