@@ -14,7 +14,7 @@ app.use(parseBody.urlencoded({ extended: false }));
 app.use("/shop",shop);
 app.use(user);
  app.use((req, res, next) => {
-     res.render("pages/error", { "title": "error page" });
+     res.render("pages/error", { "title": "error page " });
  })
 
 
