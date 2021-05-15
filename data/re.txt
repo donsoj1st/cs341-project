@@ -1,0 +1,65 @@
+[
+   {
+    name: 'BRANDED SHIRT',
+    price: '20',
+    image: 'https://banner2.kisspng.com/20180331/uwq/kisspng-supermarket-shopping-cart-logo-computer-icons-groc-supermarket-5abf74486461a3.2709066915224965844112.jpg',
+    description: 'white round neck',
+    id: '0.9237342441579843'
+  },
+   {
+    name: 'BRANDED SHOES',
+    price: '30',
+    image: 'http://atlas-content-cdn.pixelsquid.com/stock-images/running-shoes-QJGJa6D-600.jpg',
+    description: 'america designer shoe',
+    id: '0.4892540918480377'
+  },
+   {
+    name: 'BRANDED TROUSER',
+    price: '20',
+    image: 'https://5.imimg.com/data5/GO/DI/MY-30562139/white-trouser-tr-920-500x500.png',
+    description: 'white plan trousers',
+    id: '0.4254555691385784'
+  },
+   {
+    name: 'RED BRANDED SHIRT',
+    price: '55',
+    image: 'http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Red-T-Shirt-PNG-Transparent-Image-500x673.png',
+    description: 'red polo shirt for men ',
+    id: '0.949597941154418'
+  },
+   {
+    name: 'BRANDED SNEAKERS SHOES',
+    price: '30',
+    image: 'https://atlas-content-cdn.pixelsquid.com/stock-images/nike-sneakers-q1Nv12D-600.jpg',
+    description: 'the latest sneaker in town',
+    id: '0.13270696906537083'
+  },
+   {
+    name: 'BRANDED PANT TROUSER',
+    price: '55',
+    image: 'https://alexnld.com/wp-content/uploads/2017/12/631cabbb-54d5-42bd-8b68-52179de8904f.png',
+    description: 'Very good for exercise',
+    id: '0.6732047194209458'
+  },
+   {
+    name: 'MEN BRANDED SHIRT',
+    price: '30',
+    image: 'https://www.seekpng.com/png/detail/159-1597516_sport-shirts-men-shirts-png.png',
+    description: 'Specially made for men',
+    id: '0.046248021754979884'
+  },
+   {
+    name: 'HOKA BRANDED SHOES',
+    price: '77',
+    image: 'https://www.rei.com/media/576262e5-6068-456b-9657-8f1a30d675cd?size=784x588',
+    description: 'best selling Hoka shoe',
+    id: '0.9872141309234514'
+  },
+   {
+    name: 'ETON BRANDED TROUSER',
+    price: '20',
+    image: 'https://www.gboutfitters.co.uk/images/seeland-eton-trousers-p34-540_medium.jpg',
+    description: 'eton trouser with best quality',
+    id: '0.8865106206483098'
+  }
+]
