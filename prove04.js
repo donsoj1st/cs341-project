@@ -9,23 +9,6 @@ const app = express();
 const shop = require('./routes/shop.js')
 const user = require('./routes/admin')
 const mongoose = require('mongoose');
-app.set("view engine", 'ejs');
-app.set("views", "views");
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(parseBody.urlencoded({ extended: false }));
-app.use((req, res, next) => {
-    person.findById('60a90fc81e0f7a12dcca815f').then(result => {
-        req.user = result;
-        next();
-    })
-})
-app.use("/shop", shop);
-app.use(user);
-app.use((req, res, next) => {
-    res.render("pages/error", { "title": "error page " });
-})
-
-
 const cors = require('cors') // Place this with other requires (like 'path' and 'express')
 
 const corsOptions = {
@@ -43,6 +26,24 @@ const options = {
 };
 
 const MONGODB_URL = process.env.MONGODB_URL || 'mongodb+srv://donsoj1st:7851AdeSoji@cluster0.2h96s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+app.set("view engine", 'ejs');
+app.set("views", "views");
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(parseBody.urlencoded({ extended: false }));
+app.use((req, res, next) => {
+    person.findById('60a90fc81e0f7a12dcca815f').then(result => {
+        req.user = result;
+        next();
+    })
+})
+app.use("/shop", shop);
+app.use(user);
+app.use((req, res, next) => {
+    res.render("pages/error", { "title": "error page " });
+})
+
+
+
 
 
 
