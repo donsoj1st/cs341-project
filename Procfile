@@ -1,1 +1,1 @@
-web: node prove03.js
+web: node prove04.js

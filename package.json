@@ -11,14 +11,19 @@
     "test": "node test.js",
     "prove01": "nodemon prove01.js",
     "prove02": "nodemon prove02.js",
-    "prove03": "nodemon prove03.js"
+    "prove03": "nodemon prove03.js",
+    "team": "nodemon teamactivity.js"
   },
   "dependencies": {
     "ejs": "^2.7.4",
     "express": "^4.17.1",
     "express-handlebars": "^3.0.2",
+    "express-session": "^1.17.2",
+    "mongodb": "^3.6.7",
+    "mongoose": "^5.12.10",
     "nodemon": "^2.0.7",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "save": "^2.4.0"
   },
   "devDependencies": {
     "request": "^2.81.0",
