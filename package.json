@@ -12,6 +12,7 @@
     "prove01": "nodemon prove01.js",
     "prove02": "nodemon prove02.js",
     "prove03": "nodemon prove03.js",
+    "prove04": "nodemon prove04.js",
     "team": "nodemon teamactivity.js"
   },
   "dependencies": {
