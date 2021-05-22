@@ -1,7 +1,7 @@
 <% include ../includes/head.ejs %>
 
     <h3 id="head2">Update product</h3>
-    <form action="/lastUpdate/<%= list._id %>" method="POST" id="me">
+    <form action="/update/<%= list._id %>" method="POST" id="me">
         <span>
             <p>Product name:</p>
             <input type="text" name="name" value="<%= list.name%>">
