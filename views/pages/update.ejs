@@ -1,0 +1,25 @@
+<% include ../includes/head.ejs %>
+
+    <h3 id="head2">Update product</h3>
+    <form action="/lastUpdate/<%= list._id %>" method="POST" id="me">
+        <span>
+            <p>Product name:</p>
+            <input type="text" name="name" value="<%= list.name%>">
+        </span><br>
+        <span>
+            <p>Product price:</p>
+            <input type="text" name="price" value="<%= list.price%>">
+        </span><br>
+        <span>
+            <p>Image Url:</p>
+            <input type="text" name="image" value="<%= list.image%>">
+        </span><br>
+        <span>
+            <p>Product description:</p>
+            <input type="text" name="description" value="<%= list.description%>">
+        </span><br>
+
+
+        <span><input type="submit" value="submit"> <button type="reset">Clear</button></span>
+    </form>
+    <% include ../includes/end.ejs %>

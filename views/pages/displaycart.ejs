@@ -1,0 +1,51 @@
+<% include ../includes/head.ejs %>
+    <h3 id="head2">Book informations</h3>
+    <section class="me" style="color: white">
+<%if (list) {%>
+
+<%list.forEach(element=> {%>
+    <section>
+        <h3>
+            <%=element.productId.name%>
+        </h3>
+    </section>
+
+
+    <img src="<%= element.productId.image%>" style="color: white; margin-left:20px ; height: 200px; width: 200px;">
+
+    <section>
+        <h3>Quantity</h3>
+    </section>
+    <section style="color: white; margin-left:20px ;">
+        <%= element.quantity%>
+    </section>
+    <section>
+        <h3>Description</h3>
+    </section>
+    <section style="color: white; margin-left:20px ;">
+        <%= element.productId.description%>
+    </section>
+    <section>
+        <h3>Price</h3>
+    </section>
+    <section style="color: rgb(223, 202, 21); margin-left:20px ;">
+        $<%= element.productId.price%>
+    </section>
+
+    <a href="/shop/deleteCart/<%=element.productId._id%>" style="text-align: center; margin-left:200px;">
+        <button>delete Item</button>
+    </a>
+    <%})%>
+<%} else {%>
+ <section>
+     <h2>No Cart Item</h2>
+ </section>
+<%}%>
+
+
+
+        
+
+    </section>
+
+    <% include ../includes/end.ejs %>
