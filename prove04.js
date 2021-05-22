@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 
 
 
-mongoose.connect('mongodb+srv://donsoj1st:7851AdeSoji@cluster0.2h96s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://donsoj1st:7851AdeSoji@cluster0.2h96s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true })
     .then(result => {
         person.findOne().then(user => {
             if (!user) {
