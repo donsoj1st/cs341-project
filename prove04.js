@@ -26,12 +26,29 @@ app.use((req, res, next) => {
 })
 
 
+const cors = require('cors') // Place this with other requires (like 'path' and 'express')
+
+const corsOptions = {
+    origin: "https://prove2assignment.herokuapp.com/",
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+
+const options = {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    family: 4
+};
+
+const MONGODB_URL = process.env.MONGODB_URL || 'mongodb+srv://donsoj1st:7851AdeSoji@cluster0.2h96s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 
 
 
 
-mongoose.connect('mongodb+srv://donsoj1st:7851AdeSoji@cluster0.2h96s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true })
+mongoose.connect(MONGODB_URL, { useNewUrlParser: true })
     .then(result => {
         person.findOne().then(user => {
             if (!user) {
