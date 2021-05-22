@@ -48,7 +48,7 @@ const MONGODB_URL = process.env.MONGODB_URL || 'mongodb+srv://donsoj1st:7851AdeS
 
 
 
-mongoose.connect(MONGODB_URL, { useNewUrlParser: true })
+mongoose.connect(MONGODB_URL, options)
     .then(result => {
         person.findOne().then(user => {
             if (!user) {
