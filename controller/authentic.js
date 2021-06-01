@@ -6,7 +6,7 @@ const sendMailler= require('nodemailer-sendgrid-transport');
 
 exports.login = (req, res, next) => {
    
-    res.render("Authen/userLogin", { "title": "Login page",errorMsg: req.flash('error') })
+    res.render("authen/userLogin", { "title": "Login page", errorMsg: req.flash('error') })
 
 };
 exports.postLogin = (req, res, next) => {
