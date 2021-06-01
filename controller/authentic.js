@@ -2,6 +2,8 @@ const bcrypt = require('bcryptjs');
 const person = require('../model/user');
 const nodemailer = require('nodemailer');
 const sendMailler= require('nodemailer-sendgrid-transport');
+
+
 exports.login = (req, res, next) => {
    
     res.render("Authen/userLogin", { "title": "Login page",errorMsg: req.flash('error') })
