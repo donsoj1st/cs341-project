@@ -5,6 +5,10 @@ const schema = mongoose.Schema;
 const userSchema = new schema({
     username : {
         type: String,
+       
+    },
+    password: {
+        type: String,
         required: true
     },
     email: {
@@ -48,6 +52,11 @@ userSchema.methods.delete = function (product){
     this.cart.item = updatecart;
     return this.save();
 }
+userSchema.methods.clearCart = function (params) {
+    this.cart = {item:[]};
+    return this.save();
+    
+};
 module.exports = mongoose.model('users',userSchema)
 
 

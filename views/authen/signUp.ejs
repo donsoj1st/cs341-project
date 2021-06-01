@@ -1,0 +1,26 @@
+<% include ../includes/head.ejs %>
+
+    <h3 id="head2">Signup page</h3>
+    <%if(errorMsg){%>
+        <span style="text-align: center; color:tomato; margin-left: 400px;">
+            <%=errorMsg%>
+        </span>
+        <%}%>
+    <form action="/signup" method="POST" id="me">
+        <span>
+            <p>email:</p>
+            <input type="text" name="email" ">
+        </span><br>
+        <span>
+            <p>Password</p>
+            <input type="password" name="password" ">
+        </span><br>
+        <span>
+            <p>confirm Password</p>
+            <input type="password" name="Cpassword" ">
+                </span><br>
+        <span><input type="submit" value="signup"> 
+        </span>
+        <input type="hidden" name="_csrf" value="<%=csrfToken%>">
+    </form>
+    <% include ../includes/end.ejs %>

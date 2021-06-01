@@ -1,7 +1,7 @@
 <% include ../includes/head.ejs %>
     <h3 id="head2">Book informations</h3>
     <section class="me" style="color: white">
-<%if (list) {%>
+<%if (list.length >= 1) {%>
 
 <%list.forEach(element=> {%>
     <section>
@@ -35,15 +35,17 @@
     <a href="/shop/deleteCart/<%=element.productId._id%>" style="text-align: center; margin-left:200px;">
         <button>delete Item</button>
     </a>
-    <%})%>
-<%} else {%>
- <section>
-     <h2>No Cart Item</h2>
- </section>
-<%}%>
+    <%})%><br>
+    <a href="/shop/order"><button>order</button></a>
+<%}else{%>
+    <section>
+        <h3>No item</h3>
+    </section>
+    <%}%>
 
 
 
+   
         
 
     </section>

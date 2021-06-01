@@ -8,7 +8,7 @@ exports.addProduct = (req, res, next)=>{
     console.log(req.body.name)
     
     
-    const addNew = new Products({name:req.body.name, price:req.body.price, image:req.body.image, description: req.body.description, user : req.user});
+    const addNew = new Products({name:req.body.name, price:req.body.price, image:req.body.image, description: req.body.description, user : req.session.user});
     addNew.save().then(result =>{
         console.log(result);
     })
@@ -54,4 +54,9 @@ exports.lastUpdate = (req, res, next) => {
     })
 
 };
+// exports.login = (req, res, next) => {
+//     req.session.soul = true;
+    
+//     res.render("pages/userLogin", { "title": "Login page"}) 
 
+// };

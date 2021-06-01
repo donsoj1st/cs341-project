@@ -1,11 +1,14 @@
 const Products = require('../model/productModel');
+const Order = require('../model/order');
 const { param } = require('../routes/admin');
+const order = require('../model/order');
 exports.getProducts= (req,res, next)=>{
     
     Products.find().then((params) => {
         res.render("pages/shop.ejs", { "title": "Welcome to the T cloth collections", list: params });
     })
     console.log("ades")
+    
 
 };
 
@@ -23,6 +26,7 @@ exports.getDetails = (req, res, next) => {
 exports.addtocat = (req, res, next) => {
     
     Products.findById(req.params.productid).then((data) => {
+        console.log(req.session.user)
         return req.user.addTocart(data);
     }).then(data=>{
         console.log(data)
@@ -54,6 +58,39 @@ exports.deleteCart = (req, res, next) => {
     //res.redirect('/shop');
  
 };
+
+exports.postOrder= (req,res,next) =>{
+    console.log('i got here')
+    req.user
+        .populate('cart.item.productId')
+        .execPopulate().then(result => {
+            const list = result.cart.item.map(i =>{
+                return {quantity: i.quantity, product: {...i.productId._doc}} 
+            })
+            console.log(req.session.user)
+            
+            const order = new Order({
+                user:{ email: req.user.emmail,
+                userId: req.user},
+                product: list
+            })
+            return order.save();
+        }).then(i=>{
+            req.user.clearCart();
+        })
+        .then((i)=>{
+            res.redirect('/shop/displayOrder');
+        }).catch(err=>console.log(err))
+   
+}
+exports.getOrder = (req, res, next) => {
+    Order.find({'user.userId':req.session.user._id})
+    .then(order =>{
+        
+        console.log(order)
+        res.render("pages/orderpage.ejs", { "title": "user Cart", list: order })
+    }).catch(err=> {console.log(err)})
+}
 
 
 

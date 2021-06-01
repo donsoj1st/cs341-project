@@ -1,0 +1,24 @@
+<% include ../includes/head.ejs %>
+
+    <h3 id="head2">Login</h3>
+    <%if(errorMsg){%>
+        <span style="text-align: center; color:tomato; margin-left: 400px;">
+            <%=errorMsg%>
+        </span>
+        <%}%>
+    <form action="/login" method="POST" id="me">
+        
+        <span>
+            <p>email:</p>
+            <input type="text" name="email" ">
+        </span><br>
+        <span>
+            <p>password:</p>
+            <input type="password" name="password" ">
+        </span><br>
+        
+
+        <span><input type="submit" value="login"> <button type="reset">Clear</button></span>
+        <input type="hidden" name="_csrf" value="<%=csrfToken%>">
+    </form>
+    <% include ../includes/end.ejs %>
