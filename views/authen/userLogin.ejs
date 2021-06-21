@@ -10,15 +10,16 @@
         
         <span>
             <p>email:</p>
-            <input type="text" name="email" ">
+            <input type="text" name="email" value="<%=oldInput.email%>">
         </span><br>
         <span>
             <p>password:</p>
-            <input type="password" name="password" ">
+            <input type="password" name="password" value="<%=oldInput.password%>">
         </span><br>
         
 
         <span><input type="submit" value="login"> <button type="reset">Clear</button></span>
         <input type="hidden" name="_csrf" value="<%=csrfToken%>">
     </form>
+    <a href="/reset" style="margin-left: 444px; color: black;"><button>reset password</button> </a>
     <% include ../includes/end.ejs %>

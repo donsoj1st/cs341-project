@@ -44,20 +44,27 @@ app.use(session({ secret: 'this is my secret', resave: false, saveUninitialized:
 app.use(cProtection);
 app.use(flash());
 app.use((req, res, next) => {
+    res.locals.csrfToken = req.csrfToken();
+    next();
+})
+app.use((req, res, next) => {
     if (!req.session.user) {
         return next();
     }
     person.findById(req.session.user._id).then(result => {
+        
+        if (!result) {
+            return next();
+        }
         console.log(result)
         req.user = result;
         next();
+    }).catch(err=>{
+        next(new Error(err));
     })
 
 });
-app.use((req, res, next) => {
-    res.locals.csrfToken = req.csrfToken();
-    next();
-})
+
 app.use("/shop", shop);
 app.use(user);
 app.use(userLogin);
@@ -65,6 +72,9 @@ app.use((req, res, next) => {
     res.render("pages/error", { "title": "error page " });
 })
 
+ app.use((error, req, res, next) => {
+     res.redirect('/getDberror');
+ })
 
 
 

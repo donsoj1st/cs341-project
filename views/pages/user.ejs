@@ -1,23 +1,27 @@
 
     <% include ../includes/head.ejs %>
-    
+    <%if(errorMsg){%>
+        <span style="text-align: center; color:tomato; margin-left: 400px;">
+            <%=errorMsg%>
+        </span>
+        <%}%>
     <h3 id="head2">Add New product</h3>
     <form action="/addProduct" method="POST"  id="me">
         <span>
             <p>Product name:</p>
-            <input type="text" name="name">
+            <input type="text" name="name" value="<%=oldInput.name%>">
         </span><br>
         <span>
             <p>Product price:</p>
-            <input type="text" name="price">
+            <input type="text" name="price" value="<%=oldInput.price%>">
         </span><br>
         <span>
             <p>Image Url:</p>
-            <input type="text" name="image">
+            <input type="text" name="image" value="<%=oldInput.image%>">
         </span><br>
         <span>
             <p>Product description:</p>
-            <input type="text" name="description">
+            <input type="text" name="description" value="<%=oldInput.description%>">
             <input type="hidden" name="_csrf" value="<%=csrfToken%>">
         </span><br>
         

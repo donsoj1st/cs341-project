@@ -1,4 +1,9 @@
 <% include ../includes/head.ejs %>
+<%if(errorMsg){%>
+    <span style="text-align: center; color:tomato; margin-left: 400px;">
+        <%=errorMsg%>
+    </span>
+    <%}%>
 
     <h3 id="head2">Update product</h3>
     <form action="/update/<%= list._id %>" method="POST" id="me">

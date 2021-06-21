@@ -1,0 +1,39 @@
+<% include ../includes/shopHeader.ejs %>
+    <div class="display">
+        <span><img
+                src=http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Red-T-Shirt-PNG-Transparent-Image-500x673.png
+                class="imga"></span>
+        <span class="imga1">
+            <h3>COWHIDE STANDARD CREW</h3>
+            <p>Red colored, short sleeve, printed T-shirt for men. This crew-neck T-shirt is made of organic cotton
+                and come with regular fit<br />
+
+            </p>
+        </span>
+    </div>
+    
+    <div>
+        <h2 class="fea">FEATURED PRODUCTS</h2>
+    </div>
+
+    <div class="featured">
+
+        <%for (let index=0; index < list.length; index++) {%>
+            <span><img src=<%=list[index].image%> class="imga"></span>
+            <span class="imga1">
+
+                <h3>
+                    <%=list[index].name%><br />
+                        <a href="shop/details/<%= list[index]._id %>"> <button style="background-color:#034a49;"> view
+                                details</button></a>
+                        <a href="/modify/<%= list[index]._id %>"> <button style="background-color:#034a49;">
+                                modify</button></a><br>
+
+                        <label style="background-color:yellowgreen;">price $<%=list[index].price%></label>
+                </h3>
+            </span>
+
+            <%}%>
+
+    </div>
+    <% include ../includes/end.ejs %>
